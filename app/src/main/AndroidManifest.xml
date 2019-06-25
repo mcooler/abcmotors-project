@@ -27,8 +27,10 @@
         </activity>
 
         <activity
-            android:name=".LocationFragment"
-            android:label="Location"/>
+            android:name=".FiveChess"
+            android:label="Location">
+        </activity>
+
 
 
     </application>

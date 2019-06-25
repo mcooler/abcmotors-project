@@ -1,15 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello world"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="137dp" />
-</android.support.constraint.ConstraintLayout>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_loan">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            >
+
+                <EditText
+                    android:id="@+id/total_loan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:digits="0123456789."
+                    android:hint="Total Loan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please select approved interest rate %:"/>
+
+                <RadioGroup
+                    android:id="@+id/interest"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/interest_1"
+                        android:text="10.5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        />
+                    <RadioButton
+                        android:id="@+id/interest_2"
+                        android:text="12.5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/interest_3"
+                        android:text="14.5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"/>
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please select Loan Term (in month)"/>
+
+                <RadioGroup
+                    android:id="@+id/term"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/term_1"
+                        android:text="12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        />
+                    <RadioButton
+                        android:id="@+id/term_2"
+                        android:text="24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/term_3"
+                        android:text="36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"/>
+                    <RadioButton
+                        android:id="@+id/term_4"
+                        android:text="48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"/>
+                    <RadioButton
+                        android:id="@+id/term_5"
+                        android:text="60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"/>
+                </RadioGroup>
+
+
+            <Button android:id="@+id/btn_calculate2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:background="@drawable/capsule"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/black" />
+
+
+
+                <EditText
+                    android:id="@+id/weekly_repayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Weekly Repayment"
+                    android:inputType="number"
+                    android:textColor="@color/common_google_signin_btn_text_dark_pressed"/>
+
+
+
+                <EditText
+                    android:id="@+id/monthly_repayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Monthly Repayment"
+                    android:inputType="number"
+                    android:textColor="@color/common_google_signin_btn_text_dark_pressed"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="^ This example is calculated on a loan with full repayments up to 5 year period at an interest rate from 10.5% p.a.Terms and conditions and normal lending criteria apply. An approval fee of $50 plus other third party service fees may apply. All interest rates and fees quoted are subject to change."/>
+
+            <Button android:id="@+id/apply_now"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Apply Now"
+                android:background="@drawable/capsule"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/black" />
+
+
+        </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

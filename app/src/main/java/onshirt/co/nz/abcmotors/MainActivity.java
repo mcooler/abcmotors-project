@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private String URLstring = "https://abcmotors.co.nz/android/api.php";
     ArrayList<DataModel> dataModelArrayList;
     private RvAdapter rvAdapter;
-    private RecyclerView recyclerView;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recycler);
+
 
         fetchingJSON();
 
@@ -131,13 +132,12 @@ public class MainActivity extends AppCompatActivity {
     private void showFragment(Fragment fragment){
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//        fragmentTransaction.replace(R.id.framelayout, fragment);
-//        fragmentTransaction.commit();
+        fragmentTransaction.replace(R.id.framelayout, fragment);
+        fragmentTransaction.commit();
 //        avoide overlapping
         FrameLayout frameLayout = (FrameLayout)findViewById(R.id.framelayout);
         frameLayout.removeAllViews();
-        fragmentTransaction.replace(R.id.framelayout, fragment);
-        fragmentTransaction.commit();
+
 //        if (!fragment.isAdded()){
 //            fragmentTransaction.hide(fragment).add(R.id.frame, fragment);
 //        }else{
