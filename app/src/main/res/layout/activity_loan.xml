@@ -132,7 +132,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="^ This example is calculated on a loan with full repayments up to 5 year period at an interest rate from 10.5% p.a.Terms and conditions and normal lending criteria apply. An approval fee of $50 plus other third party service fees may apply. All interest rates and fees quoted are subject to change."/>
+                android:text="^ This example is calculated on a loan with full repayments up to 5 year period at an interest rate from 10.5% p.a.Terms and conditions and normal lending criteria apply.."/>
 
             <Button android:id="@+id/apply_now"
                 android:layout_width="fill_parent"

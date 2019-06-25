@@ -33,10 +33,6 @@ public class LoginFragment extends Fragment {
     EditText et_username, et_password;
     RequestQueue requestQueue;
 
-//    public LoginFragment(MainActivity activity) {
-//        mActivity = activity;
-//    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -63,12 +59,12 @@ public class LoginFragment extends Fragment {
 
 
 
+
+
         return view;
 
     }
-//    public void loginButtonClicked(View view) {
-//            login();
-//    }
+
 
     public void login(){
         StringRequest request = new StringRequest(Request.Method.POST, "https://abcmotors.co.nz/android/login.php", new Response.Listener<String>() {

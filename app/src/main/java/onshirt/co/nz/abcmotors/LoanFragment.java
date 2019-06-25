@@ -87,7 +87,6 @@ public class LoanFragment extends Fragment {
 
 
 
-
         return view;
 
 

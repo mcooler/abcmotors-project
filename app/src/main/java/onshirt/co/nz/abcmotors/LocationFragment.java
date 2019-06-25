@@ -30,7 +30,6 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
     MapView mMapView;
     GoogleMap mMap;
 
-    Button button;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,13 +41,13 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
         initGoogleMap(savedInstanceState);
         mMapView.onStart();
 
-//        button.findViewById(R.id.show_location);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(getActivity(), "Auckland", Toast.LENGTH_LONG).show();
-//            }
-//        });
+        Button button=view.findViewById(R.id.show_location);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "The address is in Auckland", Toast.LENGTH_LONG).show();
+            }
+        });
 
 
 
