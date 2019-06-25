@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         final LoanFragment loanFragment = new LoanFragment();
         final LocationFragment locationFragment = new LocationFragment();
         final LoginFragment loginFragment = new LoginFragment();
+        navigationView.setSelectedItemId(R.id.navigation_home);
 
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

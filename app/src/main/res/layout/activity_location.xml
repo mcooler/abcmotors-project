@@ -34,26 +34,19 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView2"
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Google Map"
-                android:gravity="center"/>
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:id="@+id/show_location"
+                android:text="Dealer's Address"
+                android:background="@drawable/capsule"/>
         </LinearLayout>
-
-
-
 
 
     </LinearLayout>
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:layout_centerInParent="true"
-        android:visibility="gone"/>
+
 
 </RelativeLayout>

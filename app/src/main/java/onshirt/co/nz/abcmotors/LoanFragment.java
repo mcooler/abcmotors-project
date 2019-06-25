@@ -1,5 +1,6 @@
 package onshirt.co.nz.abcmotors;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class LoanFragment extends Fragment {
     Button CalcBtn, ApplyNow;
@@ -74,14 +76,14 @@ public class LoanFragment extends Fragment {
         });
 
 
-//        ApplyNow = view.findViewById(R.id.apply_now);
-//        ApplyNow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                setCon
-//
-//            }
-//        });
+        ApplyNow = view.findViewById(R.id.apply_now);
+        ApplyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Please Login First", Toast.LENGTH_LONG).show();
+
+            }
+        });
 
 
 

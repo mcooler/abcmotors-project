@@ -10,6 +10,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -28,6 +30,8 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
     MapView mMapView;
     GoogleMap mMap;
 
+    Button button;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +41,16 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
         mMapView = view.findViewById(R.id.user_list_map);
         initGoogleMap(savedInstanceState);
         mMapView.onStart();
+
+//        button.findViewById(R.id.show_location);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getActivity(), "Auckland", Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+
 
         return view;
 
@@ -81,7 +95,9 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
                 double longitude = location.getLongitude();
 //                Log.i("MyLocation","Latitude: " + latitude + "\nlongitude: " + longitude);
                 mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("My Location" + location.getLongitude()+"/"+location.getLatitude()));
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 13.0f));
+
+                mMap.addMarker(new MarkerOptions().position(new LatLng(-36.904203,174.685447 )).title("Dealer"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-36.904203, 174.685447), 13.0f));
 
             }
         };

@@ -28,9 +28,17 @@
 
         <activity
             android:name=".FiveChess"
-            android:label="Location">
+            android:label="Play Game">
         </activity>
-
+        <activity android:name=".CustomerPage"
+            android:label="Customer Page">
+        </activity>
+        
+        <activity android:name=".RegisterPage"
+            android:label="Register Page">
+        </activity>
+        
+        <activity android:name=".LoanApplication"></activity>
 
 
     </application>

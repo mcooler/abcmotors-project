@@ -15,6 +15,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
     private LayoutInflater inflater;
     private ArrayList<DataModel> dataModelArrayList;
 
+
     public RvAdapter(Context ctx, ArrayList<DataModel> dataModelArrayList){
 
         inflater = LayoutInflater.from(ctx);
@@ -59,10 +60,10 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            product_id = (TextView) itemView.findViewById(R.id.product_id);
-            model = (TextView) itemView.findViewById(R.id.model);
-            price = (TextView) itemView.findViewById(R.id.price);
-            iv = (ImageView) itemView.findViewById(R.id.iv);
+            product_id =  itemView.findViewById(R.id.product_id);
+            model =  itemView.findViewById(R.id.model);
+            price =  itemView.findViewById(R.id.price);
+            iv =  itemView.findViewById(R.id.iv);
         }
 
     }
